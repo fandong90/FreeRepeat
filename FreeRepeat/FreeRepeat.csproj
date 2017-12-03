@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B22B8AEF-2186-45A2-8C5C-C5E572E5F64B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FreeRepeat</RootNamespace>
+    <AssemblyName>FreeRepeat</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FreeRepeat.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlExpression.cs" />
+    <Compile Include="RelationExpression.cs" />
+    <Compile Include="Table\TableRelationExpression.cs" />
+    <Compile Include="Chart\ChartRelationExpression.cs" />
+    <Compile Include="Excel\ExcelRelationExpression.cs" />
+    <Compile Include="FreeRepeatTemplate.cs" />
+    <Compile Include="FreeRepeatTypes.cs" />
+    <Compile Include="FreeRepeatObj.cs" />
+    <Compile Include="Monitor\FreeRepeatMonitorObj.cs" />
+    <Compile Include="FreeRepeatEntity.cs" />
+    <Compile Include="Data\FreeRepeatData.cs" />
+    <Compile Include="Table\FreeRepeatTableObj.cs" />
+    <Compile Include="Excel\FreeRepeatExcelObj.cs" />
+    <Compile Include="Chart\FreeRepeatChartObj.cs" />
+    <Compile Include="Table\TableEntity.cs" />
+    <Compile Include="Chart\HighchartEntity.cs" />
+    <Compile Include="Chart\Highchart.cs" />
+    <Compile Include="Excel\ExcelEntity.cs" />
+    <Compile Include="Excel\Excel.cs" />
+    <Compile Include="PDF\FreeRepeatPdfObj.cs" />
+    <Compile Include="PDF\PdfEntity.cs" />
+    <Compile Include="PDF\PdfRelationExpression.cs" />
+    <Compile Include="PDF\Pdf.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Table\" />
+    <Folder Include="Chart\" />
+    <Folder Include="Excel\" />
+    <Folder Include="Template\" />
+    <Folder Include="Monitor\" />
+    <Folder Include="Data\" />
+    <Folder Include="PDF\" />
+    <Folder Include="Inspector\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
